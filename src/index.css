@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply antialiased;
+    background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    min-height: 100vh;
+  }
+}
+
+.colorful-bg {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.soft-mesh {
+  background-color: #fdfbfb;
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(225, 100%, 94%, 1) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, hsla(160, 100%, 94%, 1) 0, transparent 50%), 
+    radial-gradient(at 50% 50%, hsla(280, 100%, 94%, 1) 0, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(200, 100%, 94%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(30, 100%, 94%, 1) 0, transparent 50%);
+  background-attachment: fixed;
+}
+
